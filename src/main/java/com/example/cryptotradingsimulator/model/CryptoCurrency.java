@@ -1,7 +1,9 @@
 package com.example.cryptotradingsimulator.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table("crypto_currencies")
 public class CryptoCurrency {
     @Id
     private String symbol;

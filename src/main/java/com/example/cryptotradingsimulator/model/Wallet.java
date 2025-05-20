@@ -1,11 +1,12 @@
 package com.example.cryptotradingsimulator.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
+@Table("wallets")
 public class Wallet {
     @Id
     private long id;

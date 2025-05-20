@@ -1,11 +1,13 @@
 package com.example.cryptotradingsimulator.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Table("accounts")
 public class Account {
     private static final BigDecimal INITIAL_BALANCE = new BigDecimal(10_000);
 
