@@ -23,12 +23,6 @@ public class Holding {
         setCryptoCurrencyAmount(cryptoCurrencyAmount);
     }
 
-    public Holding(long walletId, String cryptoCurrencySymbol, BigDecimal cryptoCurrencyAmount) {
-        setWalletId(walletId);
-        setCryptoCurrencySymbol(cryptoCurrencySymbol);
-        setCryptoCurrencyAmount(cryptoCurrencyAmount);
-    }
-
     public long getId() {
         return id;
     }

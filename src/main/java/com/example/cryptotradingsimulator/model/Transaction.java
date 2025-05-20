@@ -9,37 +9,27 @@ public class Transaction {
     @Id
     private long id;
 
-    private long accountId;
     private String currencySymbol;
     private BigDecimal amount;
     private BigDecimal price;
     private BigDecimal profit;
     private LocalDateTime date;
 
+    private long accountId;
+
     public Transaction() {
 
     }
 
-    public Transaction(long id, long accountId, String currencySymbol, BigDecimal amount, BigDecimal price,
-                       BigDecimal profit, LocalDateTime date) {
+    public Transaction(long id, String currencySymbol, BigDecimal amount, BigDecimal price, BigDecimal profit,
+                       LocalDateTime date, long accountId) {
         setId(id);
-        setAccountId(accountId);
         setCurrencySymbol(currencySymbol);
         setAmount(amount);
         setPrice(price);
         setProfit(profit);
         setDate(date);
-    }
-
-    public Transaction(LocalDateTime date, BigDecimal profit, BigDecimal price, BigDecimal amount,
-                       String currencySymbol,
-                       long accountId) {
         setAccountId(accountId);
-        setCurrencySymbol(currencySymbol);
-        setAmount(amount);
-        setPrice(price);
-        setProfit(profit);
-        setDate(date);
     }
 
     public long getId() {
