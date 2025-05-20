@@ -9,23 +9,23 @@ public class Holding {
     private long id;
 
     private long walletId;
-    private String cryptoCurrencyName;
+    private String cryptoCurrencySymbol;
     private BigDecimal cryptoCurrencyAmount;
 
     public Holding() {
 
     }
 
-    public Holding(long id, long walletId, String cryptoCurrencyName, BigDecimal cryptoCurrencyAmount) {
+    public Holding(long id, long walletId, String cryptoCurrencySymbol, BigDecimal cryptoCurrencyAmount) {
         setId(id);
         setWalletId(walletId);
-        setCryptoCurrencyName(cryptoCurrencyName);
+        setCryptoCurrencySymbol(cryptoCurrencySymbol);
         setCryptoCurrencyAmount(cryptoCurrencyAmount);
     }
 
-    public Holding(long walletId, String cryptoCurrencyName, BigDecimal cryptoCurrencyAmount) {
+    public Holding(long walletId, String cryptoCurrencySymbol, BigDecimal cryptoCurrencyAmount) {
         setWalletId(walletId);
-        setCryptoCurrencyName(cryptoCurrencyName);
+        setCryptoCurrencySymbol(cryptoCurrencySymbol);
         setCryptoCurrencyAmount(cryptoCurrencyAmount);
     }
 
@@ -45,12 +45,12 @@ public class Holding {
         this.walletId = walletId;
     }
 
-    public String getCryptoCurrencyName() {
-        return cryptoCurrencyName;
+    public String getCryptoCurrencySymbol() {
+        return cryptoCurrencySymbol;
     }
 
-    public void setCryptoCurrencyName(String cryptoCurrencyName) {
-        this.cryptoCurrencyName = cryptoCurrencyName;
+    public void setCryptoCurrencySymbol(String cryptoCurrencySymbol) {
+        this.cryptoCurrencySymbol = cryptoCurrencySymbol;
     }
 
     public BigDecimal getCryptoCurrencyAmount() {

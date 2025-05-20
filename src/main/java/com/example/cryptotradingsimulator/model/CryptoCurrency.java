@@ -4,9 +4,9 @@ import org.springframework.data.annotation.Id;
 
 public class CryptoCurrency {
     @Id
-    private String name;
-
     private String symbol;
+
+    private String name;
 
     public CryptoCurrency() {
 
