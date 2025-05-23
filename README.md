@@ -7,13 +7,8 @@ A full-stack web application designed to simulate cryptocurrency trading, featur
 - [About the Project](#about-the-project)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-    - [Backend Setup](#backend-setup)
-    - [Frontend Setup](#frontend-setup)
-- [API Endpoints](#api-endpoints)
-- [Database Schema](#database-schema)
 - [SQL Queries](#sql-queries)
-- [License](#license)
+
 
 ## About the Project
 
@@ -50,4 +45,4 @@ This project provides a robust environment for simulating cryptocurrency trading
 
 ## SQL Queries
 
-A detailed documentation of all SQL queries used within the repository layer can be found in the [SQL_QUERIES.md](SQL_QUERIES.md) file.
+A detailed documentation of all SQL queries used within the repository layer can be found.
