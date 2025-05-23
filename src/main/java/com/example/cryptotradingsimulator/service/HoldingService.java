@@ -25,10 +25,6 @@ public class HoldingService {
         return holdingRepository.save(holding);
     }
 
-    public List<Holding> getAllHoldings() {
-        return holdingRepository.selectAll();
-    }
-
     public Holding getHoldingById(long id) {
         Optional<Holding> holding = holdingRepository.findById(id);
         if (holding.isEmpty()) {
@@ -48,9 +44,9 @@ public class HoldingService {
         holdingRepository.updateAmount(holding);
     }
 
-    public void deleteHoldingById(Long id) {
-        getHoldingById(id);
-        holdingRepository.deleteById(id);
+    public void deleteHoldingByWalletId(Long walletId) {
+        getHoldingById(walletId);
+        holdingRepository.deleteByWalletId(walletId);
     }
 
     public void increaseHolding(long walletId, String currencySymbol, BigDecimal amount) {

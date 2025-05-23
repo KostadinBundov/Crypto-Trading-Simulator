@@ -21,14 +21,17 @@ public class AccountService {
     private final AccountRepository accountRepository;
     private final WalletService walletService;
     private final TransactionService transactionService;
+    private final HoldingService holdingService;
 
     @Autowired
     public AccountService(AccountRepository accountRepository,
                           WalletService walletService,
-                          TransactionService transactionService) {
+                          TransactionService transactionService,
+                          HoldingService holdingService) {
         this.accountRepository = accountRepository;
         this.walletService = walletService;
         this.transactionService = transactionService;
+        this.holdingService = holdingService;
     }
 
     public Account saveNewAccount(Account account) {
@@ -91,8 +94,8 @@ public class AccountService {
     public void resetAccountBalance(long id) {
         Account account = getAccountById(id);
         account.setBalance(Account.INITIAL_BALANCE);
-        account.setTransactions(new ArrayList<>());
 
+        holdingService.deleteHoldingByWalletId(account.getWallet().getId());
         accountRepository.update(account);
     }
 

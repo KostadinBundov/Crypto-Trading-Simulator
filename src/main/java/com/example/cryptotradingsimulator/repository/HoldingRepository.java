@@ -49,8 +49,8 @@ public class HoldingRepository {
         return holdings.stream().findFirst();
     }
 
-    public void deleteById(long id) {
-        String sql = "DELETE FROM holdings WHERE id = ?;";
-        jdbcTemplate.update(sql, id);
+    public void deleteByWalletId(long walletId) {
+        String sql = "DELETE FROM holdings WHERE wallet_id = ?;";
+        jdbcTemplate.update(sql, walletId);
     }
 }
