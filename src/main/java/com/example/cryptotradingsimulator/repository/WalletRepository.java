@@ -33,11 +33,6 @@ public class WalletRepository {
         return jdbcTemplate.query(sql, new WalletRowMapper());
     }
 
-    public void update(Wallet account) {
-        String sql = "UPDATE wallets SET account_id = ? WHERE id = ?;";
-        jdbcTemplate.update(sql, account.getAccountId(), account.getId());
-    }
-
     public Optional<Wallet> findByAccountId(long accountId) {
         String sql = "SELECT * FROM wallets WHERE account_id = ?;";
         List<Wallet> wallets = jdbcTemplate.query(sql, new WalletRowMapper(), accountId);
@@ -54,6 +49,11 @@ public class WalletRepository {
     public void deleteById(long id) {
         String sql = "DELETE FROM wallets WHERE id = ?;";
         jdbcTemplate.update(sql, id);
+    }
+
+    public void deleteByAccountId(long accountId) {
+        String sql = "DELETE FROM wallets WHERE account_id = ?;";
+        jdbcTemplate.update(sql, accountId);
     }
 
     private Long getWalletId(long accountId) {

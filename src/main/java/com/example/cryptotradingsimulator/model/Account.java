@@ -9,7 +9,7 @@ import java.util.List;
 
 @Table("accounts")
 public class Account {
-    private static final BigDecimal INITIAL_BALANCE = new BigDecimal(10_000);
+    public static final BigDecimal INITIAL_BALANCE = new BigDecimal(10_000);
 
     @Id
     private long id;
